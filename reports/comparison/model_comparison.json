@@ -1,0 +1,150 @@
+{
+  "test_split_n": 270,
+  "models": [
+    {
+      "model": "custom_cnn:v1",
+      "params": 423462,
+      "file_mb": 5.17,
+      "train_minutes": 70.2,
+      "val_accuracy": 1.0,
+      "test_accuracy": 0.9888888888888889,
+      "test_acc_ci95": [
+        0.9678467469452553,
+        0.9962142284507401
+      ],
+      "test_macro_f1": 0.9888879742812327,
+      "test_macro_f1_ci95": [
+        0.9746910172677091,
+        1.0
+      ],
+      "test_errors": 3,
+      "latency_b1_median_ms": 9.38214996131137,
+      "latency_b1_p95_ms": 10.19778999616392,
+      "throughput_b32_img_s": 154.2579781466045,
+      "per_class_f1": {
+        "Crazing": 0.9887640449438202,
+        "Inclusion": 0.9777777777777777,
+        "Patches": 1.0,
+        "Pitted_Surface": 0.9887640449438202,
+        "Rolled-in_Scale": 0.989010989010989,
+        "Scratches": 0.989010989010989
+      },
+      "robustness": {
+        "brightness_shift=-80": 0.8703703703703703,
+        "brightness_shift=-60": 0.9703703703703703,
+        "brightness_shift=-40": 0.9888888888888889,
+        "brightness_shift=-20": 0.9925925925925926,
+        "brightness_shift=0": 0.9888888888888889,
+        "brightness_shift=20": 0.9851851851851852,
+        "brightness_shift=40": 0.9703703703703703,
+        "brightness_shift=60": 0.9296296296296296,
+        "brightness_shift=80": 0.8222222222222222,
+        "contrast_scale=0.4": 0.5925925925925926,
+        "contrast_scale=0.55": 0.9222222222222223,
+        "contrast_scale=0.7": 0.9444444444444444,
+        "contrast_scale=1.0": 0.9888888888888889,
+        "contrast_scale=1.3": 0.9851851851851852,
+        "contrast_scale=1.6": 0.9592592592592593,
+        "contrast_scale=2.0": 0.9185185185185185
+      },
+      "decision_test": {
+        "n": 270,
+        "decision_counts": {
+          "PASS_CANDIDATE": 45,
+          "REJECT_CANDIDATE": 130,
+          "MANUAL_REVIEW": 95
+        },
+        "rule_counts": {
+          "class_policy:review": 87,
+          "low_confidence": 5,
+          "class_policy:reject": 130,
+          "reject_needs_higher_confidence": 3,
+          "class_policy:accept": 45
+        },
+        "automation_rate": 0.6481481481481481,
+        "auto_decided_classification_accuracy": 0.9942857142857143,
+        "misclassifications_total": 3,
+        "misclassifications_caught_by_review": 2,
+        "correct_predictions_sent_to_review": 93,
+        "escaped_reject_class_defects": 0,
+        "false_rejects": 0
+      }
+    },
+    {
+      "model": "resnet18:v1",
+      "params": 11189190,
+      "file_mb": 128.99,
+      "train_minutes": 20.8,
+      "val_accuracy": 1.0,
+      "test_accuracy": 1.0,
+      "test_acc_ci95": [
+        0.9859714521095407,
+        1.0
+      ],
+      "test_macro_f1": 1.0,
+      "test_macro_f1_ci95": [
+        1.0,
+        1.0
+      ],
+      "test_errors": 0,
+      "latency_b1_median_ms": 24.27759999409318,
+      "latency_b1_p95_ms": 25.929534976603463,
+      "throughput_b32_img_s": 67.181381011252,
+      "per_class_f1": {
+        "Crazing": 1.0,
+        "Inclusion": 1.0,
+        "Patches": 1.0,
+        "Pitted_Surface": 1.0,
+        "Rolled-in_Scale": 1.0,
+        "Scratches": 1.0
+      },
+      "robustness": {
+        "brightness_shift=-80": 0.9148148148148149,
+        "brightness_shift=-60": 0.9888888888888889,
+        "brightness_shift=-40": 1.0,
+        "brightness_shift=-20": 1.0,
+        "brightness_shift=0": 1.0,
+        "brightness_shift=20": 1.0,
+        "brightness_shift=40": 0.9925925925925926,
+        "brightness_shift=60": 0.9666666666666667,
+        "brightness_shift=80": 0.8962962962962963,
+        "contrast_scale=0.4": 0.9777777777777777,
+        "contrast_scale=0.55": 1.0,
+        "contrast_scale=0.7": 1.0,
+        "contrast_scale=1.0": 1.0,
+        "contrast_scale=1.3": 1.0,
+        "contrast_scale=1.6": 1.0,
+        "contrast_scale=2.0": 0.9888888888888889
+      },
+      "decision_test": {
+        "n": 270,
+        "decision_counts": {
+          "PASS_CANDIDATE": 45,
+          "REJECT_CANDIDATE": 135,
+          "MANUAL_REVIEW": 90
+        },
+        "rule_counts": {
+          "class_policy:review": 90,
+          "class_policy:reject": 135,
+          "class_policy:accept": 45
+        },
+        "automation_rate": 0.6666666666666666,
+        "auto_decided_classification_accuracy": 1.0,
+        "misclassifications_total": 0,
+        "misclassifications_caught_by_review": 0,
+        "correct_predictions_sent_to_review": 90,
+        "escaped_reject_class_defects": 0,
+        "false_rejects": 0
+      }
+    }
+  ],
+  "mcnemar_exact": {
+    "only_first_correct": 0,
+    "only_second_correct": 3,
+    "both_correct": 267,
+    "both_wrong": 0,
+    "exact_p_value": 0.25,
+    "significant_at_0_05": false
+  },
+  "disclaimer": "Measured on the NEU-CLS academic benchmark (held-out test split, n=270). Not an estimate of performance on a production line."
+}

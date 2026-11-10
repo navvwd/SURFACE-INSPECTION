@@ -1,0 +1,67 @@
+C:\Users\DELL\Downloads\DEEP LEARNING\IndustrialSight-AI\.venv\Lib\site-packages\keras\src\trainers\epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+
+=== stage 'head'  lr=0.001  trainable params=3,078 ===
+Epoch 1/8
+40/40 - 26s - 647ms/step - accuracy: 0.4317 - loss: 1.4641 - val_accuracy: 0.8815 - val_loss: 0.7876 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 2/8
+40/40 - 26s - 646ms/step - accuracy: 0.8317 - loss: 0.6924 - val_accuracy: 0.9815 - val_loss: 0.3925 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 3/8
+40/40 - 26s - 652ms/step - accuracy: 0.9159 - loss: 0.4421 - val_accuracy: 0.9852 - val_loss: 0.2517 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 4/8
+40/40 - 29s - 714ms/step - accuracy: 0.9341 - loss: 0.3395 - val_accuracy: 0.9889 - val_loss: 0.1802 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 5/8
+40/40 - 31s - 773ms/step - accuracy: 0.9500 - loss: 0.2671 - val_accuracy: 0.9963 - val_loss: 0.1397 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 6/8
+40/40 - 27s - 671ms/step - accuracy: 0.9698 - loss: 0.2136 - val_accuracy: 0.9926 - val_loss: 0.1156 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 7/8
+40/40 - 32s - 802ms/step - accuracy: 0.9698 - loss: 0.1850 - val_accuracy: 0.9963 - val_loss: 0.0971 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 8/8
+40/40 - 26s - 654ms/step - accuracy: 0.9722 - loss: 0.1614 - val_accuracy: 0.9926 - val_loss: 0.0880 - learning_rate: 0.0010 - lr: 0.0010
+
+=== stage 'finetune'  lr=0.0001  trainable params=10,488,838 ===
+Epoch 9/48
+40/40 - 55s - 1s/step - accuracy: 0.9532 - loss: 0.1713 - val_accuracy: 0.9963 - val_loss: 0.0086 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 10/48
+40/40 - 57s - 1s/step - accuracy: 0.9952 - loss: 0.0141 - val_accuracy: 0.9926 - val_loss: 0.0189 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 11/48
+40/40 - 53s - 1s/step - accuracy: 0.9905 - loss: 0.0355 - val_accuracy: 0.9852 - val_loss: 0.0442 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 12/48
+40/40 - 47s - 1s/step - accuracy: 0.9913 - loss: 0.0361 - val_accuracy: 1.0000 - val_loss: 0.0038 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 13/48
+40/40 - 53s - 1s/step - accuracy: 0.9881 - loss: 0.0408 - val_accuracy: 0.9926 - val_loss: 0.0240 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 14/48
+40/40 - 53s - 1s/step - accuracy: 0.9937 - loss: 0.0418 - val_accuracy: 1.0000 - val_loss: 0.0014 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 15/48
+40/40 - 47s - 1s/step - accuracy: 0.9937 - loss: 0.0260 - val_accuracy: 1.0000 - val_loss: 8.0166e-04 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 16/48
+40/40 - 47s - 1s/step - accuracy: 0.9992 - loss: 0.0026 - val_accuracy: 1.0000 - val_loss: 0.0017 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 17/48
+40/40 - 48s - 1s/step - accuracy: 1.0000 - loss: 2.2389e-04 - val_accuracy: 1.0000 - val_loss: 6.9143e-04 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 18/48
+40/40 - 47s - 1s/step - accuracy: 0.9976 - loss: 0.0087 - val_accuracy: 0.9926 - val_loss: 0.0194 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 19/48
+40/40 - 49s - 1s/step - accuracy: 1.0000 - loss: 3.0843e-04 - val_accuracy: 1.0000 - val_loss: 8.2422e-05 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 20/48
+40/40 - 46s - 1s/step - accuracy: 1.0000 - loss: 7.8504e-04 - val_accuracy: 1.0000 - val_loss: 6.4538e-05 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 21/48
+40/40 - 47s - 1s/step - accuracy: 1.0000 - loss: 3.8259e-04 - val_accuracy: 1.0000 - val_loss: 3.1696e-05 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 22/48
+40/40 - 51s - 1s/step - accuracy: 0.9960 - loss: 0.0133 - val_accuracy: 1.0000 - val_loss: 1.8059e-04 - learning_rate: 1.0000e-04 - lr: 1.0000e-04
+Epoch 23/48
+40/40 - 48s - 1s/step - accuracy: 0.9825 - loss: 0.0583 - val_accuracy: 0.9704 - val_loss: 0.0901 - learning_rate: 1.0000e-04 - lr: 5.0000e-05
+Epoch 24/48
+40/40 - 46s - 1s/step - accuracy: 0.9921 - loss: 0.0239 - val_accuracy: 1.0000 - val_loss: 0.0014 - learning_rate: 5.0000e-05 - lr: 5.0000e-05
+Epoch 25/48
+40/40 - 47s - 1s/step - accuracy: 0.9992 - loss: 0.0020 - val_accuracy: 1.0000 - val_loss: 5.0098e-04 - learning_rate: 5.0000e-05 - lr: 5.0000e-05
+Epoch 26/48
+40/40 - 46s - 1s/step - accuracy: 0.9992 - loss: 0.0014 - val_accuracy: 0.9963 - val_loss: 0.0040 - learning_rate: 5.0000e-05 - lr: 5.0000e-05
+Epoch 27/48
+40/40 - 46s - 1s/step - accuracy: 1.0000 - loss: 1.4651e-04 - val_accuracy: 0.9963 - val_loss: 0.0038 - learning_rate: 5.0000e-05 - lr: 2.5000e-05
+Epoch 28/48
+40/40 - 46s - 1s/step - accuracy: 1.0000 - loss: 3.1774e-04 - val_accuracy: 1.0000 - val_loss: 4.2586e-04 - learning_rate: 2.5000e-05 - lr: 2.5000e-05
+Epoch 29/48
+40/40 - 48s - 1s/step - accuracy: 1.0000 - loss: 2.4395e-04 - val_accuracy: 1.0000 - val_loss: 2.4459e-04 - learning_rate: 2.5000e-05 - lr: 2.5000e-05
+
+Training done in 20.8 min. val_loss=0.0000 val_acc=1.0000
+Saved models/resnet18/v1/model.keras

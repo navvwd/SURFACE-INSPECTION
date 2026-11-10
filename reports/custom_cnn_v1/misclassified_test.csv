@@ -1,0 +1,4 @@
+filepath,true,predicted,confidence
+dataset/raw/NEU-CLS/Crazing/Cr_059.png,Crazing,Rolled-in_Scale,0.5603
+dataset/raw/NEU-CLS/Inclusion/In_283.png,Inclusion,Scratches,0.976
+dataset/raw/NEU-CLS/Pitted_Surface/PS_152.png,Pitted_Surface,Inclusion,0.6338

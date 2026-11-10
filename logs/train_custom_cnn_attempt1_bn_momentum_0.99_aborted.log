@@ -1,0 +1,20 @@
+C:\Users\DELL\Downloads\DEEP LEARNING\IndustrialSight-AI\.venv\Lib\site-packages\keras\src\trainers\epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+
+=== stage 'full'  lr=0.001  trainable params=422,502 ===
+Epoch 1/80
+40/40 - 55s - 1s/step - accuracy: 0.5167 - loss: 1.3178 - val_accuracy: 0.2889 - val_loss: 2.1589 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 2/80
+40/40 - 53s - 1s/step - accuracy: 0.6000 - loss: 1.0250 - val_accuracy: 0.2593 - val_loss: 3.2985 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 3/80
+40/40 - 51s - 1s/step - accuracy: 0.7143 - loss: 0.7915 - val_accuracy: 0.1963 - val_loss: 4.9081 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 4/80
+40/40 - 53s - 1s/step - accuracy: 0.7643 - loss: 0.6573 - val_accuracy: 0.1926 - val_loss: 5.6305 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 5/80
+40/40 - 51s - 1s/step - accuracy: 0.7825 - loss: 0.6581 - val_accuracy: 0.2704 - val_loss: 5.0367 - learning_rate: 0.0010 - lr: 0.0010
+Epoch 6/80
+40/40 - 51s - 1s/step - accuracy: 0.7968 - loss: 0.6268 - val_accuracy: 0.3296 - val_loss: 4.4226 - learning_rate: 0.0010 - lr: 5.0000e-04
+Epoch 7/80
+40/40 - 61s - 2s/step - accuracy: 0.8397 - loss: 0.5158 - val_accuracy: 0.3556 - val_loss: 4.5101 - learning_rate: 5.0000e-04 - lr: 5.0000e-04
+Epoch 8/80
+EXIT 127

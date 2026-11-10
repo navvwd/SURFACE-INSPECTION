@@ -1,0 +1,29 @@
+| Metric | custom_cnn:v1 | resnet18:v1 |
+|---|---:|---:|
+| Parameters | 423,462 | 11,189,190 |
+| Model file incl. optimizer state (MB) | 5.17 | 128.99 |
+| Training time (min, shared CPU, not a controlled benchmark) | 70.2 | 20.8 |
+| Validation accuracy | 1.0000 | 1.0000 |
+| Test accuracy [95% CI] | 0.9889 [0.968, 0.996] | 1.0000 [0.986, 1.000] |
+| Test macro-F1 [95% CI] | 0.9889 [0.975, 1.000] | 1.0000 [1.000, 1.000] |
+| Test errors (of 270) | 3 | 0 |
+| F1 Crazing | 0.989 | 1.000 |
+| F1 Inclusion | 0.978 | 1.000 |
+| F1 Patches | 1.000 | 1.000 |
+| F1 Pitted_Surface | 0.989 | 1.000 |
+| F1 Rolled-in_Scale | 0.989 | 1.000 |
+| F1 Scratches | 0.989 | 1.000 |
+| Latency batch=1 median / p95 (ms) | 9.4 / 10.2 | 24.3 / 25.9 |
+| Throughput batch=32 (img/s) | 154 | 67 |
+| Robustness acc (brightness_shift=-60) | 0.970 | 0.989 |
+| Robustness acc (brightness_shift=60) | 0.930 | 0.967 |
+| Robustness acc (contrast_scale=0.55) | 0.922 | 1.000 |
+| Robustness acc (contrast_scale=1.6) | 0.959 | 1.000 |
+| Policy automation rate (test) | 0.648 | 0.667 |
+| Accuracy of auto-decided (test) | 0.9943 | 1.0000 |
+| Escaped reject-class defects | 0 | 0 |
+| False rejects | 0 | 0 |
+
+McNemar exact test: only custom_cnn:v1 correct = 0, only resnet18:v1 correct = 3, p = 0.2500 (not significant at 0.05).
+
+_Measured on the NEU-CLS academic benchmark (held-out test split, n=270). Not an estimate of performance on a production line._

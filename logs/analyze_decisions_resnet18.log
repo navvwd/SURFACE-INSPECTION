@@ -1,0 +1,21 @@
+{
+  "n": 270,
+  "decision_counts": {
+    "PASS_CANDIDATE": 45,
+    "REJECT_CANDIDATE": 135,
+    "MANUAL_REVIEW": 90
+  },
+  "rule_counts": {
+    "class_policy:review": 90,
+    "class_policy:reject": 135,
+    "class_policy:accept": 45
+  },
+  "automation_rate": 0.6666666666666666,
+  "auto_decided_classification_accuracy": 1.0,
+  "misclassifications_total": 0,
+  "misclassifications_caught_by_review": 0,
+  "correct_predictions_sent_to_review": 90,
+  "escaped_reject_class_defects": 0,
+  "false_rejects": 0
+}
+Saved models/resnet18/v1/decision_analysis.json

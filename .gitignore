@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+dataset/raw/
+backend/storage/
+*.sqlite
+*.db
+node_modules/
+frontend/dist/
+backend/data/
+logs/backend.log
+logs/frontend.log
+frontend/node_modules/
+
+# design brief (contains the old working title; kept locally)
+UI.MD
+# local caches / runtime
+frontend/.vite/
+*.db-wal
+*.db-shm

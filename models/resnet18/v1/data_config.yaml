@@ -1,0 +1,58 @@
+# Dataset + split configuration (Phase 2).
+# All paths are relative to the project root.
+
+dataset:
+  name: NEU-CLS
+  raw_dir: dataset/raw/NEU-CLS          # canonical class-folder layout produced by training/import_dataset.py
+  image_size: [200, 200]                # (width, height) expected for every image
+  channels: 1                           # stored as single-channel grayscale PNG
+  expected_per_class: 300
+  allowed_extensions: [.png, .bmp, .jpg, .jpeg]
+  # Order defines the integer label index used by every model. Do not reorder after training.
+  classes:
+    - Crazing
+    - Inclusion
+    - Patches
+    - Pitted_Surface
+    - Rolled-in_Scale
+    - Scratches
+  class_codes:                          # NEU file-name prefixes
+    Crazing: Cr
+    Inclusion: In
+    Patches: Pa
+    Pitted_Surface: PS
+    Rolled-in_Scale: RS
+    Scratches: Sc
+
+source:
+  type: huggingface_parquet
+  repo: newguyme/neu_cls                # third-party mirror; no dataset card, integer labels only
+  revision: main
+  download_dir: dataset/raw/_download_hf_neu_cls
+  files:
+    train: train.parquet                # the mirror's own split is IGNORED; we re-split below
+    test: test.parquet
+  # The mirror ships integer labels without names. This mapping was established by visual
+  # inspection of a contact sheet against the NEU-CLS defect descriptions (see docs/DECISIONS.md, D-007).
+  label_map:
+    0: Crazing
+    1: Inclusion
+    2: Patches
+    3: Pitted_Surface
+    4: Rolled-in_Scale
+    5: Scratches
+  label_map_verification: visual
+
+split:
+  seed: 42
+  train: 0.70
+  val: 0.15
+  test: 0.15
+  out_dir: dataset/splits
+  # Perceptual-hash Hamming distance (64-bit pHash) at or below which two images are treated as
+  # near-duplicates and forced into the same split.
+  near_duplicate_max_distance: 4
+
+reports:
+  dataset_dir: reports/dataset
+  eda_dir: reports/eda

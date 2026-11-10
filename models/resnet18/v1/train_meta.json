@@ -1,0 +1,70 @@
+{
+  "model_name": "resnet18",
+  "model_version": "v1",
+  "architecture": "resnet18",
+  "classes": [
+    "Crazing",
+    "Inclusion",
+    "Patches",
+    "Pitted_Surface",
+    "Rolled-in_Scale",
+    "Scratches"
+  ],
+  "input_shape": [
+    200,
+    200,
+    1
+  ],
+  "gradcam_layer": "layer4_1_out",
+  "total_params": 11189190,
+  "seed": 42,
+  "trained_at": "2026-11-10T21:16:49+00:00",
+  "total_training_seconds": 1249.1,
+  "stages": [
+    {
+      "name": "head",
+      "trainable": "head",
+      "learning_rate": 0.001,
+      "trainable_params": 3078,
+      "epochs_run": 8,
+      "best_epoch": 8,
+      "best_val_loss": 0.08802509307861328,
+      "best_val_accuracy": 0.9925925731658936,
+      "seconds": 222.4,
+      "seconds_per_epoch": 27.8
+    },
+    {
+      "name": "finetune",
+      "trainable": [
+        "layer3",
+        "layer4",
+        "head"
+      ],
+      "learning_rate": 0.0001,
+      "trainable_params": 10488838,
+      "epochs_run": 21,
+      "best_epoch": 21,
+      "best_val_loss": 3.1695657526142895e-05,
+      "best_val_accuracy": 1.0,
+      "seconds": 1026.2,
+      "seconds_per_epoch": 48.9
+    }
+  ],
+  "final_val_loss": 3.1695657526142895e-05,
+  "final_val_accuracy": 1.0,
+  "normalization_train_only": {
+    "mean": 0.5044403195611579,
+    "std": 0.21073616645881038
+  },
+  "environment": {
+    "python": "3.11.9",
+    "tensorflow": "2.20.0",
+    "keras": "3.15.1",
+    "numpy": "2.4.6",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "device": "CPU",
+    "TF_ENABLE_ONEDNN_OPTS": "0",
+    "TF_DETERMINISTIC_OPS": "1"
+  }
+}

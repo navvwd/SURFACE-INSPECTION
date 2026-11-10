@@ -1,0 +1,8 @@
+{
+  "n_images": 60,
+  "trained_vs_random_weights_spearman_mean": 0.2002939368272716,
+  "trained_vs_random_weights_spearman_abs_mean": 0.25796596872137595,
+  "flip_consistency_spearman_mean": 0.9316722539778372,
+  "interpretation": "Low |rho| vs random weights means the maps depend on learned parameters (passes the randomisation sanity check). High flip consistency means explanations are stable under a label-preserving transform. Neither validates the maps as defect boundaries."
+}
+Saved reports/resnet18_v1/gradcam_examples.png

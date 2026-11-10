@@ -1,0 +1,195 @@
+{
+  "model": "custom_cnn:v1",
+  "policy_version": "1.0",
+  "policy": {
+    "version": "1.0",
+    "class_actions": {
+      "Crazing": "review",
+      "Inclusion": "reject",
+      "Patches": "reject",
+      "Pitted_Surface": "review",
+      "Rolled-in_Scale": "accept",
+      "Scratches": "reject"
+    },
+    "min_confidence": 0.8,
+    "min_margin": 0.3,
+    "max_normalized_entropy": 0.5,
+    "reject_min_confidence": 0.9,
+    "input_flags_require_review": true
+  },
+  "validation_confidence_sweep": [
+    {
+      "threshold": 0.4,
+      "coverage": 1.0,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.42,
+      "coverage": 1.0,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.44,
+      "coverage": 1.0,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.46,
+      "coverage": 1.0,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.48,
+      "coverage": 1.0,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.5,
+      "coverage": 1.0,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.52,
+      "coverage": 1.0,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.54,
+      "coverage": 0.9962962962962963,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.56,
+      "coverage": 0.9962962962962963,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.58,
+      "coverage": 0.9962962962962963,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 0.9962962962962963,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.62,
+      "coverage": 0.9925925925925926,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.64,
+      "coverage": 0.9925925925925926,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.66,
+      "coverage": 0.9925925925925926,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.68,
+      "coverage": 0.9925925925925926,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.9925925925925926,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.72,
+      "coverage": 0.9925925925925926,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.74,
+      "coverage": 0.9925925925925926,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.76,
+      "coverage": 0.9925925925925926,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.78,
+      "coverage": 0.9925925925925926,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.9925925925925926,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.82,
+      "coverage": 0.9814814814814815,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.84,
+      "coverage": 0.9814814814814815,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.86,
+      "coverage": 0.9814814814814815,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.88,
+      "coverage": 0.9777777777777777,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.9,
+      "coverage": 0.9777777777777777,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.92,
+      "coverage": 0.9703703703703703,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.94,
+      "coverage": 0.9666666666666667,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.96,
+      "coverage": 0.9444444444444444,
+      "auto_accuracy": 1.0
+    },
+    {
+      "threshold": 0.98,
+      "coverage": 0.8962962962962963,
+      "auto_accuracy": 1.0
+    }
+  ],
+  "test": {
+    "n": 270,
+    "decision_counts": {
+      "PASS_CANDIDATE": 45,
+      "REJECT_CANDIDATE": 130,
+      "MANUAL_REVIEW": 95
+    },
+    "rule_counts": {
+      "class_policy:review": 87,
+      "low_confidence": 5,
+      "class_policy:reject": 130,
+      "reject_needs_higher_confidence": 3,
+      "class_policy:accept": 45
+    },
+    "automation_rate": 0.6481481481481481,
+    "auto_decided_classification_accuracy": 0.9942857142857143,
+    "misclassifications_total": 3,
+    "misclassifications_caught_by_review": 2,
+    "correct_predictions_sent_to_review": 93,
+    "escaped_reject_class_defects": 0,
+    "false_rejects": 0
+  },
+  "note": "Decision errors are measured against the illustrative policy applied to the true class."
+}

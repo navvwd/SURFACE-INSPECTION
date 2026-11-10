@@ -1,0 +1,79 @@
+{
+  "note": "Pixel statistics computed on the train split only.",
+  "counts_per_split": {
+    "Crazing": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    },
+    "Inclusion": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    },
+    "Patches": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    },
+    "Pitted_Surface": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    },
+    "Rolled-in_Scale": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    },
+    "Scratches": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    }
+  },
+  "train_per_class": {
+    "Crazing": {
+      "n": 210,
+      "brightness_mean": 141.43,
+      "brightness_sd": 28.36,
+      "contrast_mean": 29.22,
+      "contrast_sd": 4.77
+    },
+    "Inclusion": {
+      "n": 210,
+      "brightness_mean": 106.28,
+      "brightness_sd": 32.4,
+      "contrast_mean": 13.06,
+      "contrast_sd": 5.47
+    },
+    "Patches": {
+      "n": 210,
+      "brightness_mean": 132.82,
+      "brightness_sd": 42.44,
+      "contrast_mean": 54.18,
+      "contrast_sd": 12.11
+    },
+    "Pitted_Surface": {
+      "n": 210,
+      "brightness_mean": 177.55,
+      "brightness_sd": 46.94,
+      "contrast_mean": 27.02,
+      "contrast_sd": 7.62
+    },
+    "Rolled-in_Scale": {
+      "n": 210,
+      "brightness_mean": 117.17,
+      "brightness_sd": 24.6,
+      "contrast_mean": 16.0,
+      "contrast_sd": 3.49
+    },
+    "Scratches": {
+      "n": 210,
+      "brightness_mean": 96.54,
+      "brightness_sd": 29.36,
+      "contrast_mean": 21.88,
+      "contrast_sd": 8.48
+    }
+  }
+}

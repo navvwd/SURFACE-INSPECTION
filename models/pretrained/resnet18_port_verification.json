@@ -1,0 +1,13 @@
+{
+  "source": "torchvision 0.29.2+cpu, ResNet18_Weights.IMAGENET1K_V1",
+  "torchvision_imagenet_top1_reported": 69.758,
+  "modules_copied": 41,
+  "verification_inputs": 14,
+  "max_abs_logit_diff": 1.7464160919189453e-05,
+  "mean_abs_logit_diff": 1.2039300827382249e-06,
+  "max_relative_diff": 2.2458566490968224e-06,
+  "top1_agreement": 1.0,
+  "top5_set_agreement": 1.0,
+  "passed": true,
+  "output_file": "models/pretrained/resnet18_imagenet_backbone.h5"
+}

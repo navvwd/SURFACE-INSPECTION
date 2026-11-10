@@ -1,0 +1,28 @@
+# Inspection decision policy (Phase 5)
+#
+# IMPORTANT
+# - The model identifies WHICH NEU defect type an image most resembles. NEU-CLS has no defect-free
+#   class, so the model cannot certify that a surface is clean (DECISIONS D-004).
+# - The per-class actions below are an ILLUSTRATIVE default for the prototype, not a metallurgical or
+#   customer specification. In a real plant they would be set by quality engineering per product grade.
+# - A REJECT_CANDIDATE needs (a) a class whose action is "reject" AND (b) a reliable prediction
+#   (passes every uncertainty gate AND confidence >= reject_min_confidence). Confidence alone never rejects.
+# - Every outcome is a *candidate*; final disposition belongs to a human (review workflow).
+
+policy_version: "1.0"
+
+class_actions:          # reject | review | accept
+  Crazing: review
+  Inclusion: reject
+  Patches: reject
+  Pitted_Surface: review
+  Rolled-in_Scale: accept      # example: treated as cosmetic / within tolerance for this product grade
+  Scratches: reject
+
+uncertainty_gates:      # any failing gate -> MANUAL_REVIEW
+  min_confidence: 0.80          # top-1 softmax probability
+  min_margin: 0.30              # top-1 minus top-2 probability
+  max_normalized_entropy: 0.50  # entropy / log(num_classes), 0 = certain, 1 = uniform
+
+reject_min_confidence: 0.90     # extra bar for automatic REJECT_CANDIDATE
+input_flags_require_review: true  # resized / colour / near-uniform inputs -> MANUAL_REVIEW

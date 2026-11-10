@@ -1,0 +1,11 @@
+custom_cnn v1  TEST  acc=0.9889 (95% CI 0.968-0.996)  macroF1=0.9889  errors=3/270
+custom_cnn v1  VAL   acc=1.0000  macroF1=1.0000
+   Crazing          P=1.000 R=0.978 F1=0.989
+   Inclusion        P=0.978 R=0.978 F1=0.978
+   Patches          P=1.000 R=1.000 F1=1.000
+   Pitted_Surface   P=1.000 R=0.978 F1=0.989
+   Rolled-in_Scale  P=0.978 R=1.000 F1=0.989
+   Scratches        P=0.978 R=1.000 F1=0.989
+   latency batch1 median 9.38 ms, p95 10.20 ms; batch32 154.3 img/s
+   robustness: {'brigh-80': 0.87, 'brigh-60': 0.97, 'brigh-40': 0.989, 'brigh-20': 0.993, 'brigh0': 0.989, 'brigh20': 0.985, 'brigh40': 0.97, 'brigh60': 0.93, 'brigh80': 0.822, 'contr0.4': 0.593, 'contr0.55': 0.922, 'contr0.7': 0.944, 'contr1.0': 0.989, 'contr1.3': 0.985, 'contr1.6': 0.959, 'contr2.0': 0.919}
+Saved models/custom_cnn/v1/evaluation.json and figures in reports/custom_cnn_v1/

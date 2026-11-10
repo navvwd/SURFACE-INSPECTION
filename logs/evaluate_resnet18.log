@@ -1,0 +1,11 @@
+resnet18 v1  TEST  acc=1.0000 (95% CI 0.986-1.000)  macroF1=1.0000  errors=0/270
+resnet18 v1  VAL   acc=1.0000  macroF1=1.0000
+   Crazing          P=1.000 R=1.000 F1=1.000
+   Inclusion        P=1.000 R=1.000 F1=1.000
+   Patches          P=1.000 R=1.000 F1=1.000
+   Pitted_Surface   P=1.000 R=1.000 F1=1.000
+   Rolled-in_Scale  P=1.000 R=1.000 F1=1.000
+   Scratches        P=1.000 R=1.000 F1=1.000
+   latency batch1 median 24.28 ms, p95 25.93 ms; batch32 67.2 img/s
+   robustness: {'brigh-80': 0.915, 'brigh-60': 0.989, 'brigh-40': 1.0, 'brigh-20': 1.0, 'brigh0': 1.0, 'brigh20': 1.0, 'brigh40': 0.993, 'brigh60': 0.967, 'brigh80': 0.896, 'contr0.4': 0.978, 'contr0.55': 1.0, 'contr0.7': 1.0, 'contr1.0': 1.0, 'contr1.3': 1.0, 'contr1.6': 1.0, 'contr2.0': 0.989}
+Saved models/resnet18/v1/evaluation.json and figures in reports/resnet18_v1/

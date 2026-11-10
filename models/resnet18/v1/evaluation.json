@@ -1,0 +1,366 @@
+{
+  "model_name": "resnet18",
+  "model_version": "v1",
+  "evaluated_at": "2026-11-10T21:19:08+00:00",
+  "classes": [
+    "Crazing",
+    "Inclusion",
+    "Patches",
+    "Pitted_Surface",
+    "Rolled-in_Scale",
+    "Scratches"
+  ],
+  "total_params": 11189190,
+  "model_file_mb": 128.99,
+  "validation": {
+    "n": 270,
+    "correct": 270,
+    "accuracy": 1.0,
+    "accuracy_ci95_wilson": [
+      0.9859714521095407,
+      1.0
+    ],
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "macro_f1_ci95_bootstrap": [
+      1.0,
+      1.0
+    ],
+    "per_class": {
+      "Crazing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "Inclusion": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "Patches": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "Pitted_Surface": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "Rolled-in_Scale": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "Scratches": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      }
+    },
+    "confusion_matrix": [
+      [
+        45,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        45,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        45,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        45,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        45,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        45
+      ]
+    ],
+    "mean_confidence_correct": 0.9999683499336243,
+    "mean_confidence_wrong": null
+  },
+  "test": {
+    "n": 270,
+    "correct": 270,
+    "accuracy": 1.0,
+    "accuracy_ci95_wilson": [
+      0.9859714521095407,
+      1.0
+    ],
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "macro_f1_ci95_bootstrap": [
+      1.0,
+      1.0
+    ],
+    "per_class": {
+      "Crazing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "Inclusion": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "Patches": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "Pitted_Surface": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "Rolled-in_Scale": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      },
+      "Scratches": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 45
+      }
+    },
+    "confusion_matrix": [
+      [
+        45,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        45,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        45,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        45,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        45,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        45
+      ]
+    ],
+    "mean_confidence_correct": 0.9999431371688843,
+    "mean_confidence_wrong": null
+  },
+  "robustness_test": [
+    {
+      "perturbation": "brightness_shift",
+      "value": -80,
+      "accuracy": 0.9148148148148149
+    },
+    {
+      "perturbation": "brightness_shift",
+      "value": -60,
+      "accuracy": 0.9888888888888889
+    },
+    {
+      "perturbation": "brightness_shift",
+      "value": -40,
+      "accuracy": 1.0
+    },
+    {
+      "perturbation": "brightness_shift",
+      "value": -20,
+      "accuracy": 1.0
+    },
+    {
+      "perturbation": "brightness_shift",
+      "value": 0,
+      "accuracy": 1.0
+    },
+    {
+      "perturbation": "brightness_shift",
+      "value": 20,
+      "accuracy": 1.0
+    },
+    {
+      "perturbation": "brightness_shift",
+      "value": 40,
+      "accuracy": 0.9925925925925926
+    },
+    {
+      "perturbation": "brightness_shift",
+      "value": 60,
+      "accuracy": 0.9666666666666667
+    },
+    {
+      "perturbation": "brightness_shift",
+      "value": 80,
+      "accuracy": 0.8962962962962963
+    },
+    {
+      "perturbation": "contrast_scale",
+      "value": 0.4,
+      "accuracy": 0.9777777777777777
+    },
+    {
+      "perturbation": "contrast_scale",
+      "value": 0.55,
+      "accuracy": 1.0
+    },
+    {
+      "perturbation": "contrast_scale",
+      "value": 0.7,
+      "accuracy": 1.0
+    },
+    {
+      "perturbation": "contrast_scale",
+      "value": 1.0,
+      "accuracy": 1.0
+    },
+    {
+      "perturbation": "contrast_scale",
+      "value": 1.3,
+      "accuracy": 1.0
+    },
+    {
+      "perturbation": "contrast_scale",
+      "value": 1.6,
+      "accuracy": 1.0
+    },
+    {
+      "perturbation": "contrast_scale",
+      "value": 2.0,
+      "accuracy": 0.9888888888888889
+    }
+  ],
+  "latency_cpu": {
+    "batch_1": {
+      "runs": 200,
+      "median_ms": 24.27759999409318,
+      "p95_ms": 25.929534976603463,
+      "mean_ms": 24.39565550244879,
+      "per_image_median_ms": 24.27759999409318,
+      "throughput_img_per_s": 41.190232981979406
+    },
+    "batch_32": {
+      "runs": 20,
+      "median_ms": 476.322450034786,
+      "p95_ms": 516.0500350932125,
+      "mean_ms": 481.3062100263778,
+      "per_image_median_ms": 14.885076563587063,
+      "throughput_img_per_s": 67.181381011252
+    }
+  },
+  "latency_hardware": {
+    "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "tensorflow": "2.20.0"
+  },
+  "training": {
+    "total_training_seconds": 1249.1,
+    "stages": [
+      {
+        "name": "head",
+        "trainable": "head",
+        "learning_rate": 0.001,
+        "trainable_params": 3078,
+        "epochs_run": 8,
+        "best_epoch": 8,
+        "best_val_loss": 0.08802509307861328,
+        "best_val_accuracy": 0.9925925731658936,
+        "seconds": 222.4,
+        "seconds_per_epoch": 27.8
+      },
+      {
+        "name": "finetune",
+        "trainable": [
+          "layer3",
+          "layer4",
+          "head"
+        ],
+        "learning_rate": 0.0001,
+        "trainable_params": 10488838,
+        "epochs_run": 21,
+        "best_epoch": 21,
+        "best_val_loss": 3.1695657526142895e-05,
+        "best_val_accuracy": 1.0,
+        "seconds": 1026.2,
+        "seconds_per_epoch": 48.9
+      }
+    ]
+  },
+  "disclaimer": "Measured on the NEU-CLS academic benchmark (held-out test split, n=270). Not an estimate of performance on a production line."
+}

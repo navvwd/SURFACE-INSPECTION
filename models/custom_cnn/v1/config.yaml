@@ -1,0 +1,37 @@
+# Custom CNN training configuration (Phase 3)
+model:
+  name: custom_cnn
+  version: v1
+  architecture: custom_cnn
+  input_shape: [200, 200, 1]        # raw grayscale, 0-255; normalisation is inside the model
+  filters: [32, 64, 128, 256]       # one Conv-BN-ReLU-MaxPool block per entry (first conv is 5x5)
+  dense_units: 128
+  dropout_conv_head: 0.4            # after global average pooling
+  dropout_dense: 0.3
+  l2: 0.0001
+  bn_momentum: 0.9                  # Keras default 0.99 is too slow for 40 steps/epoch (DECISIONS D-015)
+  gradcam_layer: gradcam_target     # ReLU output of the last conv block (25x25)
+
+data:
+  config: configs/data.yaml
+  batch_size: 32
+  augmentation:                     # applied to TRAIN split only, on-the-fly
+    flip_horizontal: true
+    flip_vertical: true
+    rot90: true                     # random multiples of 90 degrees (defect texture is orientation-free)
+    brightness_max_delta: 0.15      # in [0,1] intensity units (~38 gray levels); see DECISIONS D-013
+    contrast_range: [0.7, 1.3]
+
+training:
+  seed: 42
+  epochs: 80
+  stages:
+    - name: full
+      epochs: 80
+      learning_rate: 0.001
+      trainable: all
+  optimizer: adam
+  early_stopping_patience: 12       # on val_loss, best weights restored
+  reduce_lr_patience: 5
+  reduce_lr_factor: 0.5
+  min_lr: 0.00001

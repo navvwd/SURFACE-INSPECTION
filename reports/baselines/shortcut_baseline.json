@@ -1,0 +1,42 @@
+{
+  "note": "Global-intensity-only baselines; no spatial information.",
+  "baselines": {
+    "mean_std": {
+      "selected_C": 10,
+      "val_accuracy": 0.6592592592592592,
+      "test_accuracy": 0.6370370370370371,
+      "test_accuracy_ci95_wilson": [
+        0.5781287439974353,
+        0.6921004688029574
+      ],
+      "test_macro_f1": 0.6390909502255763,
+      "test_per_class_recall": {
+        "Crazing": 0.4666666666666667,
+        "Inclusion": 0.7555555555555555,
+        "Patches": 0.7777777777777778,
+        "Pitted_Surface": 0.5555555555555556,
+        "Rolled-in_Scale": 0.6444444444444445,
+        "Scratches": 0.6222222222222222
+      }
+    },
+    "histogram32": {
+      "selected_C": 100,
+      "val_accuracy": 0.6148148148148148,
+      "test_accuracy": 0.6185185185185185,
+      "test_accuracy_ci95_wilson": [
+        0.5592985356807737,
+        0.6744132159303765
+      ],
+      "test_macro_f1": 0.6207492658899308,
+      "test_per_class_recall": {
+        "Crazing": 0.6,
+        "Inclusion": 0.7111111111111111,
+        "Patches": 0.7777777777777778,
+        "Pitted_Surface": 0.6222222222222222,
+        "Rolled-in_Scale": 0.6222222222222222,
+        "Scratches": 0.37777777777777777
+      }
+    }
+  },
+  "chance_accuracy": 0.16666666666666666
+}

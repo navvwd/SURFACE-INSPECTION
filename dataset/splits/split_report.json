@@ -1,0 +1,69 @@
+{
+  "seed": 42,
+  "fractions": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "total": 1800,
+  "per_split": {
+    "train": 1260,
+    "val": 270,
+    "test": 270
+  },
+  "per_class_per_split": {
+    "Crazing": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    },
+    "Inclusion": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    },
+    "Patches": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    },
+    "Pitted_Surface": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    },
+    "Rolled-in_Scale": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    },
+    "Scratches": {
+      "train": 210,
+      "val": 45,
+      "test": 45
+    }
+  },
+  "duplicate_groups_merged": 1,
+  "leakage_check": {
+    "train-val": {
+      "shared_files": 0,
+      "shared_pixel_hashes": 0,
+      "shared_duplicate_groups": 0
+    },
+    "train-test": {
+      "shared_files": 0,
+      "shared_pixel_hashes": 0,
+      "shared_duplicate_groups": 0
+    },
+    "val-test": {
+      "shared_files": 0,
+      "shared_pixel_hashes": 0,
+      "shared_duplicate_groups": 0
+    }
+  },
+  "leakage_free": true,
+  "normalization_train_only": {
+    "mean": 0.5044403195611579,
+    "std": 0.21073616645881038
+  }
+}

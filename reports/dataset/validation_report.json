@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "dataset": "NEU-CLS",
+  "raw_dir": "dataset/raw/NEU-CLS",
+  "source": {
+    "type": "huggingface_parquet",
+    "repo": "newguyme/neu_cls",
+    "revision": "main",
+    "label_map_verification": "visual"
+  },
+  "total_images": 1800,
+  "per_class": {
+    "Crazing": 300,
+    "Inclusion": 300,
+    "Patches": 300,
+    "Pitted_Surface": 300,
+    "Rolled-in_Scale": 300,
+    "Scratches": 300
+  },
+  "sizes": {
+    "200x200": 1800
+  },
+  "modes": {
+    "L": 1800
+  },
+  "exact_duplicate_groups": [
+    [
+      "dataset/raw/NEU-CLS/Patches/Pa_004.png",
+      "dataset/raw/NEU-CLS/Patches/Pa_008.png"
+    ]
+  ],
+  "near_duplicate_pairs": 0,
+  "errors": [],
+  "warnings": [
+    "Exact duplicate within Patches: ['C:/Users/DELL/Downloads/DEEP LEARNING/IndustrialSight-AI/dataset/raw/NEU-CLS/Patches/Pa_004.png', 'C:/Users/DELL/Downloads/DEEP LEARNING/IndustrialSight-AI/dataset/raw/NEU-CLS/Patches/Pa_008.png']"
+  ]
+}

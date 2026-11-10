@@ -1,0 +1,96 @@
+{
+  "model": "resnet18:v1",
+  "note": "Illustrative examples: real outputs of the trained model on held-out NEU-CLS test images, selected for clearly localised Grad-CAM maps. Not a performance claim.",
+  "examples": {
+    "Crazing": {
+      "code": "cr",
+      "source": "dataset/raw/NEU-CLS/Crazing/Cr_014.png",
+      "predicted_class": "Crazing",
+      "confidence": 0.9992,
+      "latency_ms": 31.99,
+      "probabilities": {
+        "Crazing": 0.9992,
+        "Inclusion": 0.0,
+        "Patches": 0.0,
+        "Pitted_Surface": 0.0,
+        "Rolled-in_Scale": 0.0008,
+        "Scratches": 0.0
+      }
+    },
+    "Inclusion": {
+      "code": "in",
+      "source": "dataset/raw/NEU-CLS/Inclusion/In_046.png",
+      "predicted_class": "Inclusion",
+      "confidence": 0.9999,
+      "latency_ms": 30.49,
+      "probabilities": {
+        "Crazing": 0.0,
+        "Inclusion": 0.9999,
+        "Patches": 0.0,
+        "Pitted_Surface": 0.0,
+        "Rolled-in_Scale": 0.0,
+        "Scratches": 0.0001
+      }
+    },
+    "Patches": {
+      "code": "pa",
+      "source": "dataset/raw/NEU-CLS/Patches/Pa_071.png",
+      "predicted_class": "Patches",
+      "confidence": 1.0,
+      "latency_ms": 35.77,
+      "probabilities": {
+        "Crazing": 0.0,
+        "Inclusion": 0.0,
+        "Patches": 1.0,
+        "Pitted_Surface": 0.0,
+        "Rolled-in_Scale": 0.0,
+        "Scratches": 0.0
+      }
+    },
+    "Pitted_Surface": {
+      "code": "ps",
+      "source": "dataset/raw/NEU-CLS/Pitted_Surface/PS_001.png",
+      "predicted_class": "Pitted_Surface",
+      "confidence": 1.0,
+      "latency_ms": 29.54,
+      "probabilities": {
+        "Crazing": 0.0,
+        "Inclusion": 0.0,
+        "Patches": 0.0,
+        "Pitted_Surface": 1.0,
+        "Rolled-in_Scale": 0.0,
+        "Scratches": 0.0
+      }
+    },
+    "Rolled-in_Scale": {
+      "code": "rs",
+      "source": "dataset/raw/NEU-CLS/Rolled-in_Scale/RS_067.png",
+      "predicted_class": "Rolled-in_Scale",
+      "confidence": 1.0,
+      "latency_ms": 32.42,
+      "probabilities": {
+        "Crazing": 0.0,
+        "Inclusion": 0.0,
+        "Patches": 0.0,
+        "Pitted_Surface": 0.0,
+        "Rolled-in_Scale": 1.0,
+        "Scratches": 0.0
+      }
+    },
+    "Scratches": {
+      "code": "sc",
+      "source": "dataset/raw/NEU-CLS/Scratches/Sc_054.png",
+      "predicted_class": "Scratches",
+      "confidence": 1.0,
+      "latency_ms": 36.77,
+      "probabilities": {
+        "Crazing": 0.0,
+        "Inclusion": 0.0,
+        "Patches": 0.0,
+        "Pitted_Surface": 0.0,
+        "Rolled-in_Scale": 0.0,
+        "Scratches": 1.0
+      }
+    }
+  }
+}
