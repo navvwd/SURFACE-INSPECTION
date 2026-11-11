@@ -142,6 +142,29 @@ Regenerate the website imagery after retraining with `python scripts/make_brand_
 Every inspection stores: inspection ID, product ID, batch ID, image reference, predicted defect, confidence,
 model version, timestamp, inspection decision (separate table) and human review status.
 
+## Deploy on Render
+
+Use a **Web Service**, not a Static Site. The website is served by the Python API at the same address.
+
+| Field | Value |
+|---|---|
+| Root Directory | *(leave empty: the repository root)* |
+| Runtime | Python 3 (`.python-version` pins 3.11.9) |
+| Build Command | `bash scripts/render_build.sh` |
+| Start Command | `uvicorn backend.main:app --host 0.0.0.0 --port $PORT` |
+| Health Check Path | `/api/health` |
+| Instance | **Standard (2 GB)** for both models. On 512 MB instances, set the env vars below |
+
+Low-memory option (free / starter): `SURFACECHECK_MODEL_DIRS=models/custom_cnn/v1` and `SURFACECHECK_DEFAULT_MODEL=custom_cnn:v1`.
+
+`render.yaml` holds the same settings as a Blueprint (*New → Blueprint*). What the build does:
+- installs `requirements-render.txt`, the runtime packages only (no PyTorch)
+- turns any Git LFS pointer files into real model files, checking their checksums
+- downloads NEU-CLS, which the simulated line needs
+- serves the committed `frontend/dist`
+
+Note: Render's filesystem is ephemeral, so the SQLite database and stored images reset on every deploy unless you attach a persistent disk.
+
 ## 4. Tests
 
 ```powershell

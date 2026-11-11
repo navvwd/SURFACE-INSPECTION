@@ -7,7 +7,7 @@ backend/storage/
 *.sqlite
 *.db
 node_modules/
-frontend/dist/
+# frontend/dist/ is committed so hosts without Node.js (Render Python runtime) can serve the website
 backend/data/
 logs/backend.log
 logs/frontend.log

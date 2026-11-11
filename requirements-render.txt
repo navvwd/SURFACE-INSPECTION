@@ -1,0 +1,15 @@
+# Runtime-only dependencies for deploying the API + website (Render / any Linux server).
+# Excludes training-only packages (torch, torchvision, scikit-learn, seaborn, imagehash, pytest, playwright).
+tensorflow==2.20.0
+keras==3.15.1
+numpy==2.4.6
+pandas==3.1.1
+pyarrow==26.0.1
+opencv-python-headless==5.0.0.93
+pillow==13.0.0
+PyYAML==6.0.3
+fastapi==0.162.4
+uvicorn[standard]==0.54.0
+python-multipart==0.0.33
+SQLAlchemy==2.1.8
+reportlab==5.1.0
